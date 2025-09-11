@@ -4,7 +4,7 @@
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=9bbfda8805653a891b231e8c64e3a8b6"
+    url: "节点"
     type: http
     interval: 86400
     health-check:
