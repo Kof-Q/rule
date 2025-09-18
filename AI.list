@@ -6,6 +6,7 @@ DOMAIN-KEYWORD,Claude
 DOMAIN-KEYWORD,stream-link
 DOMAIN-KEYWORD,tvb
 # 域名后缀匹配
+DOMAIN-SUFFIX,b.ttvb.eu.org:443
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,auth0.com
