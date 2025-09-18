@@ -4,7 +4,7 @@
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
+    url: "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=9bbfda8805653a891b231e8c64e3a8b6"
     type: http
     interval: 86400
     health-check:
@@ -133,11 +133,12 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,private_ip,直连,no-resolve
+  - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
+  - RULE-SET,ai1,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
@@ -167,6 +168,7 @@ rule-providers:
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   ai: {  <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  ai1: {  <<: *class, url: "https://raw.githubusercontent.com/Kof-Q/rule/refs/heads/main/AI.list" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
